@@ -13,6 +13,32 @@
         <font color="#008000">Zouk</font> near San Diego, CA.
     
     </h2> 
+    <!-- 
     <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=aTJpZzNhdm9iajQybG4xbHM2MW9kMzczaDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%234285F4&amp;showTitle=0&amp;showNav=1&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="1100" height="600" frameborder="0" scrolling="no"></iframe>
-    </body>
+    -->
+    
+    <iframe frameborder="0" style="border-width:0;" id="cdr-calendar-iframe" width="900" height="500" src="https://www.chronoflocalendar.com/calendar/embed/4903/2126259565/"></iframe>
+    <script type="text/javascript">
+    (function() {
+        if (window.postMessage) {
+            var cdrMouseupFunc = function() {
+                var cdrIFrame = document.getElementById("cdr-calendar-iframe");
+                if (cdrIFrame.contentWindow && cdrIFrame.contentWindow.postMessage) {
+                    cdrIFrame.contentWindow.postMessage("mouseup","*");
+                }
+            }
+            if (typeof window.addEventListener != "undefined") {
+                window.addEventListener("mouseup", cdrMouseupFunc, false);
+            }
+            else if (typeof window.attachEvent != "undefined") {
+                window.attachEvent("onmouseup", cdrMouseupFunc);
+            }
+    }
+    })()
+    </script>
+
+    
+</body>
+
+
 </html>
